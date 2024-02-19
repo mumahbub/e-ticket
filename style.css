@@ -6,3 +6,7 @@ body {
 .header-img {
     background-image: url(images/banner.png);
 }
+.SelectYourSeat li{
+    display: flex;
+    gap: 160px;
+}

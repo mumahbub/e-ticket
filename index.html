@@ -55,7 +55,7 @@
                         number should be read</h4>
                     <div class="pt-6">
 
-                        <button class="btn btn-success px-8">Buy Tickets</button>
+                        <button class="btn btn-success px-8"> <a href="#buy">Buy Tickets</a></button>
                     </div>
                 </div>
             </section>
@@ -91,7 +91,7 @@
 
         <!-- E.H Paribahan -->
         <section class="mt-28 mx-28">
-            <div class="text-center">
+            <div id="buy" class="text-center">
                 <h1 class="text-4xl font-bold pb-4">E.H Paribahan</h1>
                 <h4 class="text-base text-gray-800">Passengers can find their e-ticket files in the email sent to them.
                     For
@@ -141,7 +141,9 @@
                     <div class="text-center">
                         <img class="pl-6" src="images/fare.png" alt="">
                         <div>
-                            <h1 class="font-medium text-3xl">550 Taka</h1>
+                            <h1 class="font-medium text-3xl">
+                                <span class="price">550</span>Taka
+                            </h1>
                             <h4 class="text-lg">Per Seat</h4>
                         </div>
                     </div>
@@ -171,7 +173,8 @@
                     </div>
                     <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
                     </h4>
-                    <button class="btn btn-active btn-ghost relative left-96"><img class="w-6 h-6" src="images/car-steering-wheel-logo-illustration-free-vector.jpg" alt=""></button>
+                    <button class="btn btn-active btn-ghost relative left-96"><img class="w-6 h-6"
+                            src="images/car-steering-wheel-logo-illustration-free-vector.jpg" alt=""></button>
                 </div>
                 <!-- seat -->
                 <div class="flex">
@@ -248,25 +251,8 @@
                             <h3 class="font-bold">Price</h3>
                         </div>
                         <div>
-                            <ul class="flex gap-40">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                            <ul class="flex gap-40">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                            <ul class="flex gap-40">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                            <ul class="flex gap-40">
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                            <ul id="SelectYourSeat" class="SelectYourSeat">
+
                             </ul>
                             <p>----------------------------------------------------------------------</p>
 
@@ -277,15 +263,18 @@
 
                             <div>
                                 <label class="input input-bordered flex items-center gap-2">
-                                    <input type="text" class="grow" placeholder="Have any copupon?" />
+                                    <input id="copupon"
+                                     type="text" class="grow" placeholder="Have any copupon?" />
                                     <span
+                                    
                                         class="bg-green-500 h-10 w-28 border rounded-md text-center pt-1 font-semibold">Optional</span>
                                 </label>
                             </div>
 
                             <div class="flex gap-[290px] pt-8">
                                 <h2 class="font-bold">Grand Total</h2>
-                                <h2 class="font-bold">BDT<span>00</span></h2>
+                                <h2 class="font-bold">BDT
+                                    <span id="GrandTotal" class="pl-2">00</span></h2>
                             </div>
                         </div>
                     </div>
@@ -302,7 +291,8 @@
                     <h2 class="font-bold py-4">Email ID</h2>
                     <input type="email" placeholder="Enter youe email"
                         class="input input-bordered input-success w-[500px]" />
-                    <br><button class="btn btn-success w-[500px] mt-5 text-white text-lg">Success</button>
+                    <br><a href="http://127.0.0.1:5500/success.html"><button class="btn btn-success w-[500px] mt-5 text-white text-lg">
+                        Success</button></a>
                 </div>
 
             </div>
