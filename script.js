@@ -1,18 +1,23 @@
 const allBtn = document.getElementsByClassName("add-button");
 console.log(allBtn);
 
+const button = document.getElementById("input");
+const copupon = document.getElementById("copupon");
+
 
 let seatLeft = 40;
 let seatNo = 0;
 let totalPrice = 0;
 let GrandTotal = 0;
 const price = 550;
+let getDiscount = false;
 const className = "Economoy";
+const code = "NEW15";
 
 
 for (const btn of allBtn) {
     btn.addEventListener("click", function (e) {
-        if (seatLeft > 36) {
+        if (seatLeft > 36 && !getDiscount) {
 
             btn.style.backgroundColor = 'lightgreen';
             btn.disabled = true;
@@ -47,12 +52,26 @@ for (const btn of allBtn) {
 
             SelectYourSeat.appendChild(li);
 
+            if(seatLeft === 36){
+
+               document.getElementById("input").addEventListener("click", function (e) {
+                    var z= document.getElementById("copupon").value;
+                    if(code===z){
+                        
+                        GrandTotal2 = GrandTotal * .15;
+                        document.getElementById("GrandTotal").innerText = GrandTotal-GrandTotal2;
+                        button.disabled = true;
+                        copupon.disabled = true;
+
+                    }
+                    
+                    })   
+            }
+
         }
     })
 }
-document.getElementById("copupon").addEventListener("click", function (e) {
-    console.log("ghrkghkthg");
-})
+    
 
 
 
