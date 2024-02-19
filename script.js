@@ -52,26 +52,30 @@ for (const btn of allBtn) {
 
             SelectYourSeat.appendChild(li);
 
-            if(seatLeft === 36){
+            if (seatLeft === 36) {
 
-               document.getElementById("input").addEventListener("click", function (e) {
-                    var z= document.getElementById("copupon").value;
-                    if(code===z){
-                        
+                document.getElementById("input").addEventListener("click", function (e) {
+                    var z = document.getElementById("copupon").value;
+                    if (code === z) {
+
                         GrandTotal2 = GrandTotal * .15;
-                        document.getElementById("GrandTotal").innerText = GrandTotal-GrandTotal2;
+                        document.getElementById("GrandTotal").innerText = GrandTotal - GrandTotal2;
                         button.disabled = true;
                         copupon.disabled = true;
 
                     }
-                    
-                    })   
+
+                })
             }
 
+
         }
+
     })
 }
-    
+
+
+
 
 
 
